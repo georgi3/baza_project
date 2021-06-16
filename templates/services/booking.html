@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ {% if room %}
+
+     <br>
+     <br>
+     <br>
+     <br>
+              {% for chars in room %}
+        <div class="booking-form">
+            <form action="" method="post">
+                {% csrf_token %}
+                {% if form.errors %}
+                      {% for field in form %}
+                      {% for error in field.errors %}
+                      <div class="alert alert-danger">
+                         <strong>{{ error|escapejs }}</strong>
+                      </div>
+                      {% endfor %}
+                      {% endfor %}
+                      {% for error in form.non_field_errors %}
+                      <div class="alert alert-danger">
+                         <strong>{{ error|escapejs }}</strong>
+                      </div>
+                      {% endfor %}
+                  {% endif %}
+                <div class="form-group">
+                    <label for="room_name" class="col-form-label">Жильё:</label>
+                    <input type="text" id="room_name" name="room_name" class="form-control"
+                           value="{{ chars.name }}" readonly>
+                 </div>
+            <input type="hidden" name="room_price" value="{{ chars.price }}">
+
+                <div class="form-group">
+                  <label for="first_name" class="col-form-label">Имя:</label>
+                    {{ form.first_name }}
+{#                  <input type="text" id="name" name="name" class="form-control"#}
+{#                         {% if user.is_authenticated %} value="{{ user.first_name }} {{ user.last_name }}"#}
+{#                         {% endif %} required>#}
+                </div>
+                            <div class="form-group">
+                  <label for="last_name" class="col-form-label">Фамилия:</label>
+                    {{ form.last_name }}
+{#                  <input type="text" id="name" name="name" class="form-control"#}
+{#                         {% if user.is_authenticated %} value="{{ user.first_name }} {{ user.last_name }}"#}
+{#                         {% endif %} required>#}
+                </div>
+                <div class="form-group">
+                  <label for="email" class="col-form-label">Имейл: </label>
+                    <br>
+                    {{ form.email }}
+{#                  <input type="email" id="email" name="email" {% if user.is_authenticated %} value="{{ user.email }}"#}
+{#                                                            {% endif %} class="form-control" required>#}
+                </div>
+                   <div class="form-group">
+                  <label for="phone" class="col-form-label">Телефон:</label>
+                       <br>
+                       {% autoescape on %}
+
+                           {{ form.phone }}
+{#                  <input type="text" id="phone" name="phone" class="form-control">#}
+                </div>
+                <div class="form-group">
+                  <label for="starting_date" class="col-form-label">От:</label>
+                    <br>
+                    {{ form.starting_date }}
+                 </div>
+
+                <div class="form-group">
+                  <label for="end_date" class="col-form-label">До:</label>
+                    <br>
+                    {{ form.end_date }}
+                 </div>
+                  <hr>
+                <input type="submit" value="Send" class="btn btn-block btn-secondary">
+            <hr>
+          </form>
+        </div>
+                        {% endautoescape %}
+
+          {% endfor %}
+        {% endif %}
+
+
+{% endblock %}
+
+
+
+{#<div>#}
+{#  <form action="/action_page.php">#}
+{#    <label for="fname">First Name</label>#}
+{#    <input type="text" id="fname" name="firstname" placeholder="Your name..">#}
+{##}
+{#    <label for="lname">Last Name</label>#}
+{#    <input type="text" id="lname" name="lastname" placeholder="Your last name..">#}
+{##}
+{#    <label for="country">Country</label>#}
+{#    <select id="country" name="country">#}
+{#      <option value="australia">Australia</option>#}
+{#      <option value="canada">Canada</option>#}
+{#      <option value="usa">USA</option>#}
+{#    </select>#}
+{##}
+{#    <input type="submit" value="Submit">#}
+{#  </form>#}
+{#</div>#}

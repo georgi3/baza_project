@@ -1,0 +1,63 @@
+seo - mata tags(keywords description meta og) research a bit more *udemy
+tests
+postgre
+maps integration
+crypto integration
+bank integration
+tiny png!!!!
+logging users
+file check
+comments (either through admin panel or implement input check)
+django-tracking 0.4.1
+when deploying check for nginx version
+seo check
+swear word check
+https://seositecheckup.com/analysis
+site vulnerability check
+https://medium.com/swlh/proxying-like-a-pro-cccdc177b081
+
+
+https://littlecanadacamp.com
+
+https://www.prohoriv-hutir.com.ua
+
+                                             ########Baza#Project##########
+
+
+Front Page – nav bar - slide show - scroll down (contents - fishing mushroom picking hunting? competition) footer
+
+- nav bar – Home / Services(Sleeping, Boats, Parking, Guide) / About / Login(logout/register)
+- slideshow full screen pics of baza sliding each 4 sec
+- Content will have links to some text images stories... regulated within admin panel app CONTENT
+- Footer – contact info social maybe ability to send text, addy, find us by maps
+
+
+Services each separate page: -sleeping, -boats, -parking, -guide
+-Sleeping(rooms, blocks, houses) – links to the chosen sleeping place description, pics  and BOOK NOW
+-Boats(motorboat renting, paddle boat renting, motors rent) – links to the chosen boat description, pics  and BOOK NOW
+-Parking(boat parking, inside outside, car parking) – just info page
+-Guide - probably just the ability to see info and book without payment  WHEN RENTING BOATS THIS SHOULD BE SUGGESTED
+
+- BOOK NOW  page where the paying system will be implemented whether crypto or credit
+
+
+About – about us
+
+Gallery!!!!
+
+
+Registration
+- ability to log in with google maybe something else as well
+- check whether logged in or logged out
+- why do we need this??? maybe contacts, send emails,
+
+
+APPS:
+-home
+-services
+-users
+
+
+
+
+########################################################################################################################

@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div>
+
+{% include 'partials/_alerts.html'%}
+        <div class="slideshow">
+              <img class="mySlides" src="{% static 'imgs/baza3.jpeg' %}">
+              <img class="mySlides" src="{% static 'imgs/baza.jpg' %}" >
+              <img class="mySlides" src="{% static 'imgs/baza1.jpeg' %}">
+              <img class="mySlides" src="{% static 'imgs/baza5.jpg' %}">
+              <img class="mySlides" src="{% static 'imgs/baza4.jpg' %}">
+
+            <h1>База Вершина "DeLuxe"</h1>
+                <br>
+              <h4>Рыбалка, Отдых, Друзья</h4>
+        </div>
+
+        <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+        </script>
+<br>
+    </div>
+      <div class="title">
+    <h1> Рыбалка на Вершине "DeLuxe" </h1>
+    </div>
+    <div class="active-dis">
+        <p>
+        Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии
+          для предварительного просмотра макета и визуальных макетах.Lorem Ipsum является текст-заполнитель обычно
+          используется в графических, печать и издательской индустрии для предварительного просмотра макета и визуальных
+          Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии для
+          предварительного просмотра макета и визуальных макетах.макетах.Lorem Ipsum является текст-заполнитель обычно
+          используется в графических, печать и издательской индустрии для предварительного просмотра макета и визуальных
+          макетах.Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии
+          для предварительного просмотра макета и визуальных макетах.Lorem Ipsum является текст-заполнитель обычно
+          используется в графических, печать и издательской индустрии для предварительного просмотра макета и визуальных
+          Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии для
+          предварительного просмотра макета и визуальных макетах.макетах.Lorem Ipsum является текст-заполнитель обычно
+          используется в графических, печать и издательской индустрии для предварительного просмотра макета и визуальных
+          макетах.
+        </p>
+    </div>
+    <!-- Listings -->
+  <section id="listings" class="py-5">
+    <div class="">
+      <div class="row">
+
+        <!-- Listing -->
+
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top rounded-circle" src="{% static 'imgs/baza.jpg' %}" alt="">
+
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <p>Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской
+                    индустрии для предварительного просмотра макета и визуальных макетах.</p>
+              <a href="{% url 'home:activities' %}" class="btn btn-primary btn-block">Рыбалка</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top rounded-circle" src="{% static 'imgs/baza.jpg' %}" alt="">
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <p>Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской
+                    индустрии для предварительного просмотра макета и визуальных макетах.</p>
+              <a href="{% url 'home:activities' %}" class="btn btn-primary btn-block">Грибы</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top rounded-circle" src="{% static 'imgs/baza.jpg' %}" alt="">
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <p>Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской
+                    индустрии для предварительного просмотра макета и визуальных макетах.</p>
+              <a href="{% url 'home:activities' %}" class="btn btn-primary btn-block">Соревнавиния</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+{% endblock %}

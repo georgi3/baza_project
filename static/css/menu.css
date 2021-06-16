@@ -1,0 +1,301 @@
+#navbar{
+  background-color: #1E5F19FF;
+}
+
+#navbar ul {
+  list-style: none;
+}
+
+#navbar ul li {
+  color: #fff;
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+}
+
+#navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hide nested ul by default */
+#navbar ul li ul {
+  display: none;
+}
+
+#navbar ul li:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+}
+
+#navbar ul li:hover a {
+  color: #333;
+}
+
+/* Nested dropdown show */
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 97px;
+  margin-top: 1rem;
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background: #1E5F19FF;
+}
+
+#navbar ul li:hover ul li a {
+  color: #fff;
+}
+
+#navbar ul li:hover ul li:hover {
+  background: #7f7878;
+  color: inherit;
+}
+
+#navbar ul li:hover ul li span {
+  float: right;
+  color: #fff;
+  background: var(--primary-color);
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+#navbar ul li:hover ul li:hover span {
+  background: var(--secondary-color);
+}
+.droppy{
+  position: static;
+  visibility: visible;
+  display: block;
+  border-radius:0;
+  background-color: #062c33;
+    z-index: 20;
+
+}
+
+/*#showcase {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  background: coral;
+}
+
+#showcase h1 {
+  color: #fff;
+  font-size: 4rem;
+}*/
+.fa-angle-down:before {
+    content: "\f107";
+}
+#toggle {
+  visibility: hidden;
+}
+/*@media only screen and (min-width: 600px;) {
+  input[type="checkbox"],
+  .input-label {
+        pointer-events: none;
+    }
+}
+*/
+
+
+@media(max-width: 600px) {
+  #showcase h1 {
+  font-size: 20px;
+
+}
+/*  #navbar ul li {
+    display: block;
+  }
+
+  #navbar ul li:hover ul {
+    width: 100%;
+    position: relative;
+  }*/
+  #navbar ul li a {
+  color: #20ff07;
+  text-decoration: none;
+}
+  #navbar ul li:hover ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 207px;
+    margin-top: 1rem;
+}
+#navbar ul li:hover ul li {
+    display: block;
+     background: transparent;
+
+}
+#toggle {
+  visibility: visible;
+}
+#navbar ul li {
+  color: #20ff07;
+  display: block;
+  padding: 1rem;
+  position: relative;
+}
+.droppy{
+  position: static;
+  background-color: #062c33;
+    z-index: 20;
+
+}
+.menu-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: #1E5F19FF;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: #1E5F19FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover {
+  color: var(--secondary-color);
+}
+}
